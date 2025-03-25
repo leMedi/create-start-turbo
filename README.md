@@ -93,22 +93,26 @@ The generator sets up the `package.json`, `tsconfig.json` and a `index.ts`, as w
 
 ## Deployment
 
-### Webapp
-
-#### Prerequisites
-
-> **Note**
-> Please note that the Next.js application with tRPC must be deployed in order for the Expo app to communicate with the server in a production environment.
+#### Deploy to Netlify
 
 #### Deploy to Vercel
 
-Let's deploy the Next.js application to [Vercel](https://vercel.com). If you've never deployed a Turborepo app there, don't worry, the steps are quite straightforward. You can also read the [official Turborepo guide](https://vercel.com/docs/concepts/monorepos/turborepo) on deploying to Vercel.
+1. Create a new project on Vercel from this repo.
 
-1. Create a new project on Vercel, select the `apps/nextjs` folder as the root directory. Vercel's zero-config system should handle all configurations for you.
+2. Use the following settings:
 
-2. Add your `DATABASE_URL` environment variable.
+   - Framework Preset: `Other`
+   - Root Directory: `apps/webapp`
+   - Build Command: `pnpm -F webapp build --preset vercel`
+   - install command: `pnpm install`
 
-3. Done! Your app should successfully deploy. Assign your domain and use that instead of `localhost` for the `url` in the Expo app so that your Expo app can communicate with your backend when you are not in development.
+3. Add your environment variables:
+
+   - create a database on [Turso](https://turso.tech/) and get your `DATABASE_URL` and `DATABASE_AUTH_TOKEN`
+
+   - [Genrate a secret](https://www.better-auth.com/docs/installation) for `BETTER_AUTH_SECRET`
+
+4. Done! Your app should successfully deploy.
 
 ## References
 
