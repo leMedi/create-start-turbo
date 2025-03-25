@@ -8,7 +8,7 @@
 
 There are two ways of initializing an app using the `create-start-kit` starter. You can either use this repository as a template:
 
-![use-as-template](https://github.com/t3-oss/create-t3-turbo/assets/51714798/bb6c2e5d-d8b6-416e-aeb3-b3e50e2ca994)
+![use-as-template](https://github.com/leMedi/create-tanstart-t3-turbo/blob/main/assets/use-template-instructions.png?raw=true)
 
 or use Turbo's CLI to init your project (use PNPM as package manager):
 
