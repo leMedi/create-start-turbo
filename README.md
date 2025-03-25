@@ -95,6 +95,16 @@ The generator sets up the `package.json`, `tsconfig.json` and a `index.ts`, as w
 
 #### Deploy to Netlify
 
+1. Create a new project on Netlify from this repo.
+
+2. Add your environment variables:
+
+   - create a database on [Turso](https://turso.tech/) and get your `DATABASE_URL` and `DATABASE_AUTH_TOKEN`
+
+   - [Genrate a secret](https://www.better-auth.com/docs/installation) for `BETTER_AUTH_SECRET`
+
+3. Done! Your app should successfully deploy.
+
 #### Deploy to Vercel
 
 1. Create a new project on Vercel from this repo.
